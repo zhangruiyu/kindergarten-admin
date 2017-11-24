@@ -73,7 +73,7 @@ export default class BasicForms extends PureComponent {
             >
               {getFieldDecorator('picUrl', {
                 rules: [{
-                  required: true, message: '请输入图片链接',
+                  required: true, message: '请输入图片链接,请不要带qcloud前缀,要以图片后缀结尾',
                 }],
               })(
                 <TextArea style={{ minHeight: 256 }} placeholder="请输入图片链接" rows={5} />
