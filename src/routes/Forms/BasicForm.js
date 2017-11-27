@@ -73,10 +73,22 @@ export default class BasicForms extends PureComponent {
             >
               {getFieldDecorator('picUrl', {
                 rules: [{
-                  required: true, message: '请输入图片链接,请不要带qcloud前缀,要以图片后缀结尾',
+                  required: true, message: '请输入图片链接(全链接)',
                 }],
               })(
-                <TextArea style={{ minHeight: 256 }} placeholder="请输入图片链接" rows={5} />
+                <TextArea style={{ minHeight: 256 }} placeholder="请输入图片链接(全链接)" rows={5} />
+              )}
+            </FormItem>
+            <FormItem
+              {...formItemLayout}
+              label="跳转的链接"
+            >
+              {getFieldDecorator('url', {
+                rules: [{
+                  required: true, message: '请输入点击跳转链接',
+                }],
+              })(
+                <TextArea style={{ minHeight: 256 }} placeholder="请输入点击跳转链接" rows={5} />
               )}
             </FormItem>
             <FormItem {...submitFormLayout} style={{ marginTop: 32 }}>

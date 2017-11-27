@@ -43,7 +43,7 @@ export const getNavData = app => [
         icon: 'form',
         children: [
           {
-            name: '基础表单',
+            name: '添加首页轮播图',
             path: 'basic-form',
             component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/BasicForm')),
           },
